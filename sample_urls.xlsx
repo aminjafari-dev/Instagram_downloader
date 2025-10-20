@@ -1,0 +1,23 @@
+This file should be created manually by the user or using pandas.
+
+To create a sample Excel file with Instagram URLs, you can use the following Python code:
+
+```python
+import pandas as pd
+
+# Create a sample DataFrame with Instagram URLs
+data = {
+    'url': [
+        'https://www.instagram.com/p/ABC123/',
+        'https://www.instagram.com/p/DEF456/',
+        'https://www.instagram.com/p/GHI789/',
+    ]
+}
+
+df = pd.DataFrame(data)
+df.to_excel('sample_urls.xlsx', index=False)
+```
+
+The Excel file must have a column containing Instagram video URLs. By default, the column should be named 'url', but you can specify a different column name in the GUI.
+
+
