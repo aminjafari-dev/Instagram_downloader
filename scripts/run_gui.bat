@@ -1,6 +1,6 @@
 @echo off
 setlocal
-cd /d %~dp0
+cd /d %~dp0\..
 
 where python >nul 2>nul
 if errorlevel 1 (
@@ -12,10 +12,10 @@ if errorlevel 1 (
 python -m pip show yt-dlp >nul 2>nul
 if errorlevel 1 (
   echo Installing dependencies...
-  pip install -r requirements.txt
+  pip install -r scripts\requirements.txt
 )
 
-python -m cli --gui
+python -m src.cli --gui
 
 endlocal
 
